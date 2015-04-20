@@ -107,6 +107,15 @@ p, li {
 .content {
 	margin-top: -350px;
 
+	.lang {
+		text-align: center;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.section {
 		@include span-columns(6 of 12);
 		@include pad(10px);

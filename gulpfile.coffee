@@ -10,7 +10,7 @@ config = {
 # Template data
 # Change these where appropriate
 site = {
-	title: "Spilhuset ~ Coworking space",
+	title: "Spilhuset",
 	description: "Spilhuset is a Copenhagen based coworking space for game and tech startups.",
 	keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup"
 	url: "http://spilhuset.com",
@@ -193,7 +193,16 @@ gulp.task 'html', ->
 
 	template_data = {
 		"index.handlebars": {
-			title: "Home"
+			title: "Coworking Space",
+			lang: "en_US",
+			description: "Spilhuset is a Copenhagen based coworking space for game and tech startups.",
+			keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup"
+		},
+		"dk/index.handlebars": {
+			title: "Kontormiljø",
+			lang: "da_DK",
+			description: "Spilhuset er et coworking kontormiljø i København for spil and tech startups.",
+			keywords: "cowork,kontor,miljø,lokale,spil,indie,udvikler,københavn,tech,startup"
 		}
 	}
 
@@ -220,6 +229,7 @@ gulp.task 'html', ->
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(tap((file, t) ->
 			relative = file.path.substring file.base.length, file.path.length
+			console.log('path ' + relative)
 			data['template'] = template_data[relative]
 		))
 		.pipe(handlebars(data, options))
