@@ -1,0 +1,11 @@
+# Compass / SASS generated cache files
+.sass-cache
+
+# OS X Specific files
+.DS_Store
+.Spotlight-V100
+
+public
+node_modules
+components
+.env
