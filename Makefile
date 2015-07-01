@@ -12,9 +12,10 @@ install:
 	&& powder link
 
 uninstall:
-	rm -rf ./node_modules \
-	&& rm -rf ./components \
-	&& rm -rf ./public
+	powder unlink \
+	rm -rf node_modules \
+	&& rm -rf components \
+	&& make clean
 
 clean:
 	rm -rf ./public

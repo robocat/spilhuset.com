@@ -1,0 +1,56 @@
+[
+	{
+		"name": "KnapNok Games",
+		"href": "http://www.knapnokgames.com/",
+		"logo": "company-knapnokgames.png",
+		"ptop": "25px"
+	},
+	{
+		"name": "Robocat",
+		"href": "http://robo.cat/",
+		"logo": "company-robocat.png",
+		"ptop": "15px"
+	},
+	{
+		"name": "Reign Bros",
+		"href": "http://reignbros.com/",
+		"logo": "company-reignbros.png",
+		"ptop": "0px"
+	},
+	{
+		"name": "Press Play",
+		"href": "http://pressplay.dk/",
+		"logo": "company-pressplay.png",
+		"ptop": "0px"
+	},
+	{
+		"name": "Iconfinder",
+		"href": "http://iconfinder.cpm/",
+		"logo": "company-iconfinder.png",
+		"ptop": "34px"
+	},
+	{
+		"name": "Lohika",
+		"href": "http://www.lohika-games.com/",
+		"logo": "company-lohika.png",
+		"ptop": "0px"
+	},
+	{
+		"name": "glitchnap",
+		"href": "http://www.glitchnap.com/",
+		"logo": "company-glitchnap.png",
+		"ptop": "0px"
+	},
+	{
+		"name": "PortaPlay",
+		"href": "http://portaplay.dk/",
+		"logo": "company-portaplay.png",
+		"ptop": "8px"
+	},
+	{
+		"name": "Duck & Cover",
+		"href": "http://duckandcovergames.com/",
+		"logo": "company-duckandcover.png",
+		"ptop": "0px"
+	}
+]

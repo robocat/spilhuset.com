@@ -32,7 +32,7 @@ retina_suffix = "_2x"
 # Paths used for input of generated files
 paths = {
 	# These files are copied directly into public/
-	copyfile: "{downloads/*,favicon.ico,apple-touch-icon.png}",
+	copyfile: "{downloads/*,favicon.ico,apple-touch-icon.png,header_movie.m4v,header_movie.webm,header_movie.ogv}",
 	# Template handlebar files
 	handlebars: "./{**/,}*.handlebars",
 	# Sass files
@@ -40,7 +40,7 @@ paths = {
 	# Coffeescript files
 	coffee: "assets/js/**/*.coffee",
 	# Javascript files
-	js: ["assets/js/**/*.js", "components/**/*.js", "!components/**/*.min.js"],
+	js: ["assets/js/**/*.js", "components/**/dist/*.js", "!components/**/*.min.js"],
 	images: "assets/images/**/*.{jpg,png}"
 }
 
@@ -119,14 +119,15 @@ gulp.task 'coffee', ->
 # Concatenate vendor javascript files and generate
 # source map.
 gulp.task 'jsvendor', ->
-	scripts = [
-		'components/retinajs/dist/retina.js',
-		'components/jquery/dist/jquery.js',
-		'components/lightbox2/js/lightbox.js'
+	vendor = [
+		'./components/retinajs/dist/retina.js',
+		'./components/jquery/dist/jquery.js',
+		'./components/video.js/dist/video-js/video.js',
+		'./components/bigvideo.js/lib/bigvideo.js',
+		'./components/froogaloop/froogaloop.js'
 	]
-	gulp.src(scripts)
+	gulp.src(vendor)
 		.pipe(sourcemaps.init())
-		.pipe(order(scripts))
 		.pipe(concat('vendor.js'))
 		.pipe(gif(config.production, uglify()))
 		.pipe(sourcemaps.write('./maps'))
@@ -146,7 +147,7 @@ gulp.task 'copyimage', ->
 		.pipe(reload())
 
 gulp.task 'unretina', ->
-	gulp.src(["./assets/images/*#{retina_suffix}.{png,jpg}"])
+	gulp.src([paths.images, "*#{retina_suffix}.{png,jpg}"])
 		.pipe(newer({
 			dest: "#{build_path}/images",
 			map: unretinaPath
@@ -188,7 +189,8 @@ gulp.task 'sass', ->
 gulp.task 'html', ->
 	data = {
 		config: config,
-		site: site
+		site: site,
+		companies: require './data/companies.json'
 	}
 
 	template_data = {
@@ -229,7 +231,6 @@ gulp.task 'html', ->
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(tap((file, t) ->
 			relative = file.path.substring file.base.length, file.path.length
-			console.log('path ' + relative)
 			data['template'] = template_data[relative]
 		))
 		.pipe(handlebars(data, options))
@@ -248,6 +249,7 @@ gulp.task 'watch', ->
 	gulp.watch paths.handlebars, ['html']
 	gulp.watch paths.sass, ['sass']
 	gulp.watch paths.images, ['images']
+	gulp.watch './data/*.json', ['html']
 
 gulp.task 'set-production', ->
 	config.production = true

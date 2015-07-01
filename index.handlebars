@@ -1,152 +1,235 @@
 {{> header }}
 
 <div class="header-container cont">
-	<div class="header int">
-		<a hf="/" title="Spilhuset" class="logo">
+	<div class="hover" id="header-hover"></div>
+	<div class="video-overlay" id="video-overlay"></div>
+	<iframe id="spilhuset" src="https://player.vimeo.com/video/131718559?api=1&player_id=spilhuset&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="header int" id="header" data-animation-state="in">
+		<a href="#" class="logo">
 			{{{img "spilhuset.png"}}}
+		</a>
+		<h1 class="title">Workspace &amp; Community</h1>
+		<a href="#" class="play">What is spilhuset?</a>
+	</div>
+</div>
+
+<div class="place-container cont">
+	<section class="place int">
+		<h2 class="title">The best place <br>to build things <br>in Copenhagen</h2>
+
+		<div class="column a">
+			<p>Spilhuset is a magical place located in the heart of Copenhagen. Historically home to some of the nations best game developers, Spilhuset is the perfect environment for game and tech startups to meet, think, build and celebrate. Since the mid 2000s, talented and ambitious startups have contributed to our community’s culture, making it Denmark’s biggest cluster of game companies.</p>
+		</div>
+
+		<div class="column b">
+			<p>With the spirit of the community, we’re opening a cozy 620 m2 apartment-style coworking space. This new space offers the perfect compromise between intimate working space and tech community. From private space (desk or room) to conference rooms and common areas, we provide everything startups need to succeed.</p>
+		</div>
+	</section>
+</div>
+
+<div class="map-container cont">
+	<div class="map int">
+		<a href="https://www.google.dk/maps/place/Pilestr%C3%A6de+43,+1112+K%C3%B8benhavn+K/@55.6811462,12.579215,17z/data=!3m1!4b1!4m2!3m1!1s0x46525310a82927d1:0xa3f8d542574de862?hl=en" title="Show Spilhuset on Google Maps" class="location" target="_blank">
+			{{{img "map-location.png"}}}
 		</a>
 	</div>
 </div>
 
-<div class="content-container cont">
-	<div class="content int">
-		<p class="center">
-			<a class="lang" href="/dk/">Spilhuset på Dansk</a>
-		</p>
-
-		<div class="asection section">
-			<p>Spilhuset is a magical place located in the heart of Copenhagen. Historically home to some of the nations best game developers, Spilhuset is the perfect environment for game and tech startups to meet, think, build and celebrate. Since the mid 2000s, talented and ambitious startups have contributed to our community’s culture, making it Denmark’s biggest cluster of game companies.</p>
-
-		</div>
-		
-		<div class="bsection section">
-			<p>With the spirit of the community, we’re opening a cozy 620 m<sup>2</sup> apartment-style coworking space in 2015. This new space offers the perfect compromise between intimate working space and tech community. From private space (desk or room) to conference rooms and common areas, we provide everything startups need to succeed.</p>
-		</div>
-
-		<div class="csection section">
-			<h3>What we offer</h3>
-
-			<p>As a company in Spilhuset you get access to a fully furnished office environemnt in lovely surroundings. High speed internet access. We offer payed lunch arrangements. All companies have access to a large meeting room on the 2. floor, a small meeting room on the 1. floor and the dining hall with room for 40 people.</p>
-
-			<h3>The price</h3>
-
-			<ul>
-				<li>Office space in closed environment: from 2700 kr.</li>
-				<li>Virtual office space: 800 kr.</li>
-			</ul>
-
-			<h3>The space</h3>
-
-			<p class="center">Photos from the 1. floor after it's renovation.</p>
-
-			<div class="gallery">
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0835.jpg">{{{img "t_5A3A0835.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0850.jpg">{{{img "t_5A3A0850.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0860.jpg">{{{img "t_5A3A0860.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0867.jpg">{{{img "t_5A3A0867.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0871.jpg">{{{img "t_5A3A0871.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0881.jpg">{{{img "t_5A3A0881.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0887.jpg">{{{img "t_5A3A0887.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0900.jpg">{{{img "t_5A3A0900.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0906.jpg">{{{img "t_5A3A0906.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0918.jpg">{{{img "t_5A3A0918.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0921.jpg">{{{img "t_5A3A0921.jpg" false }}}</a></div>
-			</div>
-
-			<p class="center">Photos from the 2. floor shared facilities and the Robocat Office.</p>
-
-			<div class="gallery">
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8191.jpg">{{{img "t_5A3A8191.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8227.jpg">{{{img "t_5A3A8227.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8235.jpg">{{{img "t_5A3A8235.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8243.jpg">{{{img "t_5A3A8243.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8271.jpg">{{{img "t_5A3A8271.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8285.jpg">{{{img "t_5A3A8285.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8295.jpg">{{{img "t_5A3A8295.jpg" false}}}</a></div>
+<div class="offer-container cont">
+	<section class="offer int">
+		<div class="column a">
+			<h2 class="title">&nbsp;</h2>
+			<div 
+				class="slider"
+				data-current-slide="0" 
+				data-slide-width="495" 
+				data-slide-height="340">
+				<div class="images">
+					{{{img "slider-1.jpg"}}}
+					{{{img "slider-2.jpg"}}}
+				</div>
+				<div class="indicator">
+					<span class="bubble active"></span>
+					<span class="bubble"></span>
+				</div>
 			</div>
 		</div>
-	</div>
+
+		<div class="column b">
+			<h2 class="title">What we offer</h2>
+			<p>As a company or individual in Spilhuset you get access to a fully furnished office environment in lovely surroundings. Height adjustable tables and great office chairs. High speed internet access, regularly cleaned spaces and optional lunch arrangements. Everyone has access to both small and large meeting rooms, our big dining hall and several cozy nooks for co-working or relaxing. In other words, it’s the perfect place to work on your dream project.</p>
+			<a href="#" class="scrollandplay">Watch the residents talk about Spilhuset</a>
+		</div>
+	</section>
 </div>
 
-<div class="contact-container cont">
-	<div class="contact int">
-		<a href="https://www.facebook.com/spilhuset">Spilhuset on Facebook</a>
-	</div>
+<div class="pricing-container cont">
+	<section class="pricing int">
+		<div class="model flexible">
+			<div class="icon">
+				{{{img "desk-flexible.png"}}}
+			</div>
+			<h3 class="name">Flexible</h3>
+			<p class="short">Common rooms and flexible desks</p>
+			<hr>
+
+			<p class="price">999 DKK<span>/mo</span></p>
+			<p class="starting">Starting price</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+
+			<a class="learn-more" href="#">Learn more</a>
+		</div>
+
+		<div class="model fulltime">
+			<div class="icon">
+				{{{img "desk-fulltime.png"}}}
+			</div>
+
+			<h3 class="name">Full-Time</h3>
+			<p class="short">Desk own desk</p>
+			<hr>
+
+			<p class="price">2.600 DKK<span>/mo</span></p>
+			<p class="starting">Starting price</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+
+			<a class="learn-more" href="#">Learn more</a>
+		</div>
+
+		<div class="model office">
+			<div class="icon">
+				{{{img "desk-office.png"}}}
+			</div>
+			<h3 class="name">Private Office</h3>
+			<p class="short">A private office</p>
+			<hr>
+
+			<p class="price">Custom</p>
+			<p class="starting">&nbsp;</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+
+			<a class="learn-more" href="#">Learn more</a>
+		</div>
+	</section>
 </div>
 
-<div class="contact-container cont">
-	<div class="contact int">
-		<a href="mailto:hello@spilhuset.com?subject=Let's%20Talk">Get in touch</a>
-	</div>
+<div class="descriptions-containainer cont">
+	<section class="descriptions int">
+		<div class="model flexible">
+			<h3 class="type">For people on the go</h3>
+
+			<p class="long">
+				A flexible membership is for you who want a fantastic workplace a few times a week
+				<br><br>
+				You don't need to think about all the practical stuff because we take care of internet, cleaning, alarmsystems, printer, tea-kitchen, a fully equipped kitchen, meeting room and a postal address. It’s ideal for freelancers and small teams working flexible schedules
+				<br><br>
+				We've got brand new office chairs and height adjustable tables
+				<br><br>
+				You can join our optional catered lunches (at a fee)
+				<br><br>
+				A flexible membership is exactly that, flexible. There is no interminability and you can cancel your subscription at any time
+				<br><br>
+				Access 24/7
+				<br><br>
+				Establishment fee: 399,-
+				<br>
+				Deposit: 999,-
+				<br><br>
+				All Prices are excl. VAT
+			</p>
+		</div>
+
+		<div class="model fulltime">
+			<h3 class="type">Your new home</h3>
+
+			<p class="long">
+				A full-time membership is for you who want your own personal desk in Spilhuset
+				<br><br>
+				You only need to focus on your work because we take care of internet, cleaning, alarmsystems, printer, tea-kitchen, a fully equipped kitchen, several meeting rooms, a cool lobby and a postal address
+				<br><br>
+				We've got brand new office chairs and height adjustable tables
+				<br><br>
+				You can join our optional catered lunches (at a fee)
+				<br><br>
+				Your desk can be in an open environment or in a lockable joint room with your own key for an additional price of 299,-/mo.
+				<br><br>
+				Access 24/7
+				<br><br>
+				Deposit: 3 months rent
+				<br><br>
+				All Prices are excl. VAT
+			</p>
+		</div>
+
+		<div class="model office">
+			<h3 class="type">Base of operations</h3>
+
+			<p class="long">
+				We offer private appartment style offices with your own key. Here your team can work in a safe and cozy environment while we take care of all the practical things.
+				<br><br>
+				Your team will have access to a tea-kitchen, a fully equipped kitchen, several meeting rooms, a cool lobby, a big dininghall for events and obviously your own postal adress
+				<br><br>
+				We've got brand new office chairs and height adjustable tables but if you already have furniture we can also work that out
+				<br><br>
+				You can join our optional catered lunches (at a fee).
+				<br><br>
+				Access 24/7
+				<br><br>
+				Contact us for a custom solution
+				<br><br>
+				All Prices are excl. VAT
+			</p>
+		</div>
+	</section>
 </div>
 
 <div class="companies-container cont">
-	<div class="companies int">
-
-		<div class="row">
-			<div class="section asection">
-			<a href="http://www.knapnokgames.com/" target="_blank">
-				{{{img "knapnok.png"}}}
-			</a>
-			</div>
-
-			<div class="section bsection">
-				<a href="http://robo.cat" target="_blank">
-					{{{img "robocat.png"}}}
+	<section class="companies int">
+		{{#each companies}}
+			<div class="company">
+				<a href="{{this.href}}" title="Website for {{this.name}}" style="padding-top: {{this.ptop}}">
+					{{{img this.logo}}}
 				</a>
 			</div>
+		{{/each}}
 
-			<div class="section csection">
-				<a href="http://portaplay.dk/" target="_blank">
-					{{{img "portaplay.png"}}}
-				</a>
-			</div>
+		<div class="contact">
+			<a href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">You?</a>
 		</div>
-
-		<div class="row">
-			<div class="section asection">
-				<a href="http://www.iconfinder.com" target="_blank">
-					{{{img "iconfinder.png"}}}
-				</a>
-			</div>
-
-			<div class="section bsection">
-				<a href="http://www.lohika-games.com/" target="_blank">
-					{{{img "lohika.png"}}}
-				</a>
-			</div>
-
-			<div class="section csection">
-				<a href="http://pressplay.dk/" target="_blank">
-					{{{img "pressplay.png"}}}
-				</a>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="section asection">
-				<a href="http://duckandcovergames.com/" target="_blank">
-					{{{img "duckandcover.png" false}}}
-				</a>
-			</div>
-			
-		</div>
-	</div>
+	</section>	
 </div>
 
-<div class="footer-container cont">
+<div class="footer-container cont" id="footer">
 	<div class="footer int">
-		<a href="http://robo.cat" class="robocat-iphone" target="_blank">
-			{{{img "cat.png"}}}
-		</a>
-		<p>
-			Operated by <a href="http://robo.cat" target="_blank">Robocat</a>
-			<span class="space"></span>
-			<a href="http://robo.cat" class="robocat">{{{img "cat.png"}}}</a>
-			<span class="space"></span>
-			<br>
-			<a href="http://maps.google.com?q=Spilhuset" target="_blank">Pilestræde 43, Copenhagen</a>
-		</p>
+		<div class="location">
+			<a class="map" href="https://www.google.dk/maps/place/Pilestr%C3%A6de+43,+1112+K%C3%B8benhavn+K/@55.6811462,12.579215,17z/data=!3m1!4b1!4m2!3m1!1s0x46525310a82927d1:0xa3f8d542574de862?hl=en">
+				{{{img "location.png"}}}
+			</a>
+			<div class="physical">
+				<p class="company">Spilhuset</p>
+				<p class="address">
+					Pilestraede 43, 1st Floor<br>
+					1112 Copenhagen<br>
+					Denmark
+				</p>
+			</div>
+		</div>
+		<div class="getintouch">
+			<a href="//twitter.com/spilhuset/"
+				class="button twitter"
+				onClick="sendEvent('button', 'clicked', 'social-twitter');">@spilhuset</a>
+
+			<a href="//facebook.com/spilhuset/"
+			class="button facebook"
+			onClick="sendEvent('button', 'clicked', 'social-facebook');">/spilhuset</a>
+
+			<a href="mailto:hello@spilhuset.com"
+				class="button email"
+				onClick="sendEvent('button', 'clicked', 'social-email');">hello@spilhuset.com</a>
+		</div>
 	</div>
 </div>
 
