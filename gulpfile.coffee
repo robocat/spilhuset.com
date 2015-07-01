@@ -124,7 +124,8 @@ gulp.task 'jsvendor', ->
 		'./components/jquery/dist/jquery.js',
 		'./components/video.js/dist/video-js/video.js',
 		'./components/bigvideo.js/lib/bigvideo.js',
-		'./components/froogaloop/froogaloop.js'
+		'./components/froogaloop/froogaloop.js',
+		'./components/modernizr/modernizr.js'
 	]
 	gulp.src(vendor)
 		.pipe(sourcemaps.init())

@@ -21,6 +21,7 @@
     "retinajs": "~1.3.0",
     "bourbon": "~4.2.2",
     "bigvideo.js": "~1.1.5",
-    "froogaloop": "~0.1.0"
+    "froogaloop": "~0.1.0",
+    "modernizr": "~2.8.3"
   }
 }

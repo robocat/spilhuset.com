@@ -81,14 +81,14 @@ toggleDescription = (box) ->
 		$ele.addClass 'open'
 
 $(document).ready ->
-	# $ ->
-	headerContainer = $('.header-container .video-overlay')
-	bv = new $.BigVideo {container: headerContainer, controls: false, forceAutoplay: false, doLoop: true}
-	bv.init()
-	bv.show [
-		type: 'video/mp4', src: '/header_movie.m4v', {ambient: true, doLoop: true}
-		type: 'video/webm', src: '/header_movie.webm', {ambient: true, doLoop: true}
-	]
+	if !Modernizr.touch
+		headerContainer = $('.header-container .video-overlay')
+		bv = new $.BigVideo {container: headerContainer, controls: false, forceAutoplay: false, doLoop: true}
+		bv.init()
+		bv.show [
+			type: 'video/mp4', src: '/header_movie.m4v', {ambient: true, doLoop: true}
+			type: 'video/webm', src: '/header_movie.webm', {ambient: true, doLoop: true}
+		]
 
 	bv.getPlayer().on 'loadedmetadata', () ->
 		headerContainer.css 'opacity', 1
