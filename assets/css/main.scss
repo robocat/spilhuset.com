@@ -96,17 +96,6 @@ p, li {
 	z-index: 3;
 	height: 715px;
 
-	.hover {
-		background: rgb(32, 34, 43);
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		opacity: 0.5;
-		z-index: 5;
-	}
-
 	.video-overlay {
 		height: 100%;
 		left: 0;
@@ -177,7 +166,7 @@ p, li {
 }
 
 .offer {
-	padding: 40px 0;
+	padding: 40px 0 60px 0;
 
 	.title {
 		margin-bottom: 30px;
@@ -258,7 +247,7 @@ p, li {
 }
 
 .pricing {
-	padding-top: 360px;
+	
 
 	.model {
 		background: #fff;
@@ -266,6 +255,13 @@ p, li {
 		padding: 40px 10px;
 		@include span-columns(4 of 12);
 		text-align: center;
+		margin-top: 360px;
+		@include transition(all 0.2s ease-in-out);
+
+		&:hover {
+			margin-top: 320px;
+			height: 485px;
+		}
 
 		.icon {
 			height: 60px;

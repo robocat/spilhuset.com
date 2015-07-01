@@ -12,7 +12,7 @@ config = {
 site = {
 	title: "Spilhuset",
 	description: "Spilhuset is a Copenhagen based coworking space for game and tech startups.",
-	keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup"
+	keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup,kontor,udlejning,kontorhotel,københavn"
 	url: "http://spilhuset.com",
 	fb: {
 		appName: "Spilhuset",
@@ -195,16 +195,16 @@ gulp.task 'html', ->
 
 	template_data = {
 		"index.handlebars": {
-			title: "Coworking Space",
+			title: "Workspace & Community in Copenhagen",
 			lang: "en_US",
 			description: "Spilhuset is a Copenhagen based coworking space for game and tech startups.",
-			keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup"
+			keywords: "cowork,space,office,games,indie,developer,copenhagen,tech,startup,rent,sublet"
 		},
 		"dk/index.handlebars": {
-			title: "Kontormiljø",
+			title: " Workspace & Community i København",
 			lang: "da_DK",
 			description: "Spilhuset er et coworking kontormiljø i København for spil and tech startups.",
-			keywords: "cowork,kontor,miljø,lokale,spil,indie,udvikler,københavn,tech,startup"
+			keywords: "cowork,kontor,miljø,lokale,spil,indie,udvikler,københavn,tech,startup,office,kontorhotel"
 		}
 	}
 

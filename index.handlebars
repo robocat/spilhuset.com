@@ -1,7 +1,6 @@
 {{> header }}
 
 <div class="header-container cont">
-	<div class="hover" id="header-hover"></div>
 	<div class="video-overlay" id="video-overlay"></div>
 	<iframe id="spilhuset" src="https://player.vimeo.com/video/131718559?api=1&player_id=spilhuset&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	<div class="header int" id="header" data-animation-state="in">
@@ -76,7 +75,7 @@
 			<p class="price">999 DKK<span>/mo</span></p>
 			<p class="starting">Starting price</p>
 
-			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Flexible%20Desk%20in%20Spilhuset" title="Get in touch with Spilhuset">Get in touch</a>
 
 			<a class="learn-more" href="#">Learn more</a>
 		</div>
@@ -87,13 +86,13 @@
 			</div>
 
 			<h3 class="name">Full-Time</h3>
-			<p class="short">Desk own desk</p>
+			<p class="short">Your own desk</p>
 			<hr>
 
 			<p class="price">2.600 DKK<span>/mo</span></p>
 			<p class="starting">Starting price</p>
 
-			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Full-Time%20Desk%20in%20Spilhuset" title="Get in touch with Spilhuset">Get in touch</a>
 
 			<a class="learn-more" href="#">Learn more</a>
 		</div>
@@ -109,7 +108,7 @@
 			<p class="price">Custom</p>
 			<p class="starting">&nbsp;</p>
 
-			<a class="contact" href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Get in touch</a>
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Private%20Office%20in%20Spilhuset" title="Get in touch with Spilhuset">Get in touch</a>
 
 			<a class="learn-more" href="#">Learn more</a>
 		</div>
@@ -190,7 +189,7 @@
 	<section class="companies int">
 		{{#each companies}}
 			<div class="company">
-				<a href="{{this.href}}" title="Website for {{this.name}}" style="padding-top: {{this.ptop}}">
+				<a target="_blank" href="{{this.href}}" title="Website for {{this.name}}" style="padding-top: {{this.ptop}}">
 					{{{img this.logo}}}
 				</a>
 			</div>

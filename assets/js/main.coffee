@@ -57,7 +57,6 @@ player = $f(iframe)
 
 showVideo = ->
 	$('.header-container .header').fadeOut()
-	$('.header-container .hover').fadeOut()
 	$('.header-container .video-overlay').fadeOut()
 	$('#spilhuset').fadeIn()
 
@@ -65,7 +64,6 @@ showVideo = ->
 
 hideVideo = (id) ->
 	$('.header-container .header').fadeIn()
-	$('.header-container .hover').fadeIn()
 	$('.header-container .video-overlay').fadeIn()
 	$('#spilhuset').fadeOut()
 
@@ -88,8 +86,8 @@ $(document).ready ->
 	bv = new $.BigVideo {container: headerContainer, controls: false, forceAutoplay: false, doLoop: true}
 	bv.init()
 	bv.show [
-		type: 'video/mp4', src: '/header_movie.m4v', {ambient: true}
-		type: 'video/webm', src: '/header_movie.webm', {ambient: true}
+		type: 'video/mp4', src: '/header_movie.m4v', {ambient: true, doLoop: true}
+		type: 'video/webm', src: '/header_movie.webm', {ambient: true, doLoop: true}
 	]
 
 	bv.getPlayer().on 'loadedmetadata', () ->
