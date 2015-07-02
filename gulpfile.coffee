@@ -41,7 +41,7 @@ paths = {
 	coffee: "assets/js/**/*.coffee",
 	# Javascript files
 	js: ["assets/js/**/*.js", "components/**/dist/*.js", "!components/**/*.min.js"],
-	images: "assets/images/**/*.{jpg,png}"
+	images: "assets/images/**/*.{jpg,png,gif}"
 }
 
 # Includes
@@ -140,7 +140,7 @@ gulp.task 'scripts', ['coffee', 'jsvendor']
 
 # Copy image files into /public/images
 gulp.task 'copyimage', ->
-	gulp.src([paths.images, "!*#{retina_suffix}.{jpg,png}"])
+	gulp.src([paths.images, "!*#{retina_suffix}.{jpg,png,gif}"])
 		.pipe(plumber({
 			errorHandler: onError
 		}))
