@@ -146,6 +146,101 @@ p, li {
 	}
 }
 
+.navigation {
+	$height: 70px;
+	height: $height;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	@include transition(background-color 0.2s ease-in-out);
+
+	.navigation-inner {
+		@include outer-container;
+	}
+
+	&.sticky {
+		background-color: rgba(23, 30, 41, 0.7);
+		position: fixed;
+		top: 0;
+
+		.logo {
+			opacity: 1;
+		}
+	}
+
+	a {
+		color: #fff;
+		line-height: $height;
+	}
+
+	.left, .right {
+		height: 100%;
+	}
+
+	.left {
+		float: left;
+	}
+
+	.logo {
+		display: inline-block;
+		margin-top: 7px;
+		opacity: 0;
+		@include transition(opacity 0.2s ease-in-out);
+	}
+
+	.right {
+		float: right;
+
+		.social {
+			display: inline-block;
+			float: right;
+
+			a {
+				display: inline-block;
+				height: $height;
+				line-height: $height;
+				margin-top: 5px;
+			}
+		}
+
+		a {
+			margin-right: 30px;
+			font-size: 14pt;
+			// float: left;
+			line-height: $height;
+
+			&.twitter {
+				margin-right: 20px;
+			}
+
+			&.facebook {
+				margin-right: 0;
+			}
+
+			// .no-touch &:hover, &.active {
+			// 	text-decoration: none;
+			// 	border-bottom: 2px solid #fff;
+			// }
+		}
+
+		.lang {
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+			background-size: 20px 20px;
+			padding-left: 26px;
+
+			&.danish { @include retina-image("flag-dk", 20px 20px); }
+			&.english { @include retina-image("flag-uk", 20px 20px); }
+		}
+
+		.join {
+			border: 2px solid #fff;
+			padding: 11px 17px;
+		}
+	}
+}
+
 .place {
 	padding: 40px 0;
 

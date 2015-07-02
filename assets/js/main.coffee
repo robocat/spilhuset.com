@@ -80,7 +80,22 @@ toggleDescription = (box) ->
 	else
 		$ele.addClass 'open'
 
+stickyMenu = ->
+	$navigation = $(".navigation")
+	origin = 0
+	if $navigation.hasClass 'topstick'
+		origin = 0
+	if $(window).scrollTop() > origin
+		$navigation.addClass "sticky"
+	else
+		$navigation.removeClass "sticky"
+
+$(window).scroll -> 
+	stickyMenu()
+
 $(document).ready ->
+	stickyMenu()
+
 	if !Modernizr.touch
 		headerContainer = $('.header-container .video-overlay')
 		bv = new $.BigVideo {container: headerContainer, controls: false, forceAutoplay: false, doLoop: true}
