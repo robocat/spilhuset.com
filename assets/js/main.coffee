@@ -1,3 +1,5 @@
+log = (msg) -> console.log msg
+
 delay = (ms, func) -> setTimeout func, ms
 
 sendEvent = (category, action, label = "", value = undefined) ->
@@ -22,7 +24,7 @@ setCurrentSlide = (slider, slide) ->
 	$($bubbles[slide]).addClass 'active'
 
 
-nextSlide = () ->
+nextSlide = ->
 	$(".slider").each () ->
 		inner = $(this).find(".images")
 
@@ -39,6 +41,7 @@ nextSlide = () ->
 			nextSlide = currentSlide + 1
 
 		setCurrentSlide $(this), nextSlide
+		
 
 updateSlider = () ->
 	slider = $(".slider")
@@ -51,6 +54,23 @@ updateSlider = () ->
 		$(this).data 'slide-height', slideHeight
 
 		setCurrentSlide(this, $(this).data("current-slide"))
+
+slideTimer = null
+runThis = nextSlide
+
+scheduleSlideChange = ->
+	clearInterval slideTimer
+	slideTimer = setInterval runThis, 5000
+
+initSlider = ->
+	updateSlider()
+	scheduleSlideChange()
+
+	$(window).bind 'resize', -> updateSlider()
+	$(".slider .indicator .bubble").click (e) ->
+		e.preventDefault()
+		scheduleSlideChange()
+		setCurrentSlide $(this).closest('.slider'), $(this).index()
 
 iframe = $('#spilhuset')[0]
 player = $f(iframe)
@@ -115,6 +135,7 @@ $(window).scroll ->
 
 $(document).ready ->
 	stickyMenu()
+	initSlider()
 
 	if !Modernizr.touch
 		headerContainer = $('.header-container .video-overlay')
@@ -137,12 +158,6 @@ $(document).ready ->
 		$("html body").animate { scrollTop: 0 }, "slow", "swing", ->
 			showVideo()
 
-	$(window).bind 'resize', ->
-		console.log "slider"
-		updateSlider()
-
-	updateSlider()
-	setInterval nextSlide, 5000
 
 	$('.pricing .model .learn-more').click (e) ->
 		e.preventDefault()
