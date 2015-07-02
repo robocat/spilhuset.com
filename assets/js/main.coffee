@@ -95,6 +95,21 @@ stickyMenu = ->
 	else
 		$navigation.removeClass "sticky"
 
+menuItems = $('.navigation a.scrollbased')
+scrollItems = menuItems.map ->
+	item = $($(this).attr('href'))
+	return item if item.length
+
+menuItems.click (e) ->
+	e.preventDefault()
+	
+	href = $(this).attr('href')
+	if href == "#"
+		offsetTop = 0
+	else
+		offsetTop = $(href).offset().top
+	$('html body').stop().animate {scrollTop: offsetTop}, "slow"
+
 $(window).scroll -> 
 	stickyMenu()
 
