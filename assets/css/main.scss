@@ -262,7 +262,8 @@ p, li {
 }
 
 .map-container {
-	height: 600px;
+	$height: 600px;
+	height: $height;
 
 	iframe {
 		width: 100%;

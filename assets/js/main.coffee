@@ -93,7 +93,7 @@ hideVideo = (id) ->
 
 player.addEvent 'ready', ->
 	player.addEvent 'pause', hideVideo
-	player.addEvent 'finish', hideVideo
+	player.addEvent 'finished', hideVideo
 
 toggleDescription = (box) ->
 	$ele = $('.descriptions .model.' + box)
@@ -181,4 +181,19 @@ $(document).ready ->
 			toggleDescription 'fulltime'
 		else if $parent.hasClass 'office'
 			toggleDescription 'office'
+
+	mapLeaveHandler = (e) ->
+		$this = $(this)
+
+		$this.on 'click', mapClickHandler	
+		$this.off 'mouseleave', mapLeaveHandler
+		$this.find('iframe').css 'pointer-events', 'none'
 			
+	mapClickHandler = (e) ->
+		$this = $(this)
+
+		$this.off 'click', mapClickHandler
+		$this.find('iframe').css 'pointer-events', 'auto'
+		$this.on 'mouseleave', mapLeaveHandler
+
+	$('.map-container').on 'click', mapClickHandler
