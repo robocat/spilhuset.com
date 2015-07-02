@@ -75,10 +75,15 @@ player.addEvent 'ready', ->
 
 toggleDescription = (box) ->
 	$ele = $('.descriptions .model.' + box)
+	$button = $(".pricing .model."+box+" .learn-more")
 	if $ele.hasClass 'open'
 		$ele.removeClass 'open'
+		delay 200, ->
+			$button.html 'Learn more'
 	else
 		$ele.addClass 'open'
+		delay 200, ->
+			$button.html 'Close'
 
 stickyMenu = ->
 	$navigation = $(".navigation")
