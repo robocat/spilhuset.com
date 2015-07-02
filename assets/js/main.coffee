@@ -115,6 +115,9 @@ stickyMenu = ->
 	else
 		$navigation.removeClass "sticky"
 
+Modernizr.addTest 'firefox', ->
+	return !!navigator.userAgent.match /firefox/i
+
 menuItems = $('.navigation a.scrollbased')
 scrollItems = menuItems.map ->
 	item = $($(this).attr('href'))
@@ -128,7 +131,10 @@ menuItems.click (e) ->
 		offsetTop = 0
 	else
 		offsetTop = $(href).offset().top
-	$('html body').stop().animate {scrollTop: offsetTop}, "slow"
+
+	s = "html body"
+	s = "html" if Modernizr.firefox
+	$(s).stop().animate {scrollTop: offsetTop}, "slow"
 
 $(window).scroll -> 
 	stickyMenu()
