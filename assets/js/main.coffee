@@ -78,6 +78,7 @@ player = $f(iframe)
 showVideo = ->
 	$('.header-container .header').fadeOut()
 	$('.header-container .video-overlay').fadeOut()
+	$('.header-container .navigation').fadeOut()
 	$('#spilhuset').fadeIn()
 
 	player.api 'play'
@@ -85,6 +86,7 @@ showVideo = ->
 hideVideo = (id) ->
 	$('.header-container .header').fadeIn()
 	$('.header-container .video-overlay').fadeIn()
+	$('.header-container .navigation').fadeIn()
 	$('#spilhuset').fadeOut()
 
 	player.element.src = player.element.src
@@ -132,9 +134,12 @@ menuItems.click (e) ->
 	else
 		offsetTop = $(href).offset().top
 
+	scrollTo offsetTop
+
+scrollTo = (offset, cb = null) ->
 	s = "html body"
 	s = "html" if Modernizr.firefox
-	$(s).stop().animate {scrollTop: offsetTop}, "slow"
+	$(s).stop().animate {scrollTop: offset}, "slow", "swing", cb
 
 $(window).scroll -> 
 	stickyMenu()
@@ -161,7 +166,7 @@ $(document).ready ->
 
 	$('.scrollandplay').click (e) ->
 		e.preventDefault()
-		$("html body").animate { scrollTop: 0 }, "slow", "swing", ->
+		scrollTo 0, ->
 			showVideo()
 
 
