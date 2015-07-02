@@ -104,8 +104,7 @@ p, li {
 		width: 100%;
 		z-index: 4;
 		opacity: 0;
-		// @include transition(opacity 0.1s ease-in);
-		// display: none;
+		overflow: hidden;
 	}
 
 	#spilhuset {
