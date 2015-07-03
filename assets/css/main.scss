@@ -30,8 +30,9 @@ a {
 	}
 }
 
-// html { overflow: hidden; height: 100%; }
-// body { overflow: auto; height: 100%; }
+.vjs-poster, .vjs-loading-spinner, .vjs-text-track-display, .vjs-big-play-button, .vjs-control-bar, .vjs-error-display, .vjs-caption-settings {
+	display: none;
+}
 
 body {
 	background-color: #fff;
@@ -742,7 +743,7 @@ p, li {
 
 	.offer {
 		padding: 30px 10px;
-		
+
 		.a {
 			display: none;
 		}
