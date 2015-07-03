@@ -96,7 +96,9 @@ player.addEvent 'ready', ->
 	player.addEvent 'finish', hideVideo
 
 toggleDescription = (box) ->
-	$ele = $('.descriptions .model.' + box)
+	bWidth = $(window).width()
+	$ele = $('.descriptions .model.' + box) 
+	$ele = $('.pricing .model.' + box + ' .details') if bWidth < 1000
 	$button = $(".pricing .model."+box+" .learn-more")
 	if $ele.hasClass 'open'
 		$ele.removeClass 'open'

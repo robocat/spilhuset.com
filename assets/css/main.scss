@@ -355,8 +355,6 @@ p, li {
 }
 
 .pricing {
-	
-
 	.model {
 		background: #fff;
 		height: 445px;
@@ -437,6 +435,11 @@ p, li {
 
 		.contact {
 			margin-bottom: 0;
+		}
+
+		.details {
+			height: 1px;
+			overflow: hidden;
 		}
 
 	}
@@ -614,6 +617,10 @@ p, li {
 @include media(max-width 1000px) {
 	.place {
 		padding: 30px 20px;
+	}
+
+	.offer {
+		padding: 30px 10px;
 
 		.column {
 			@include span-columns(12 of 12);
@@ -631,21 +638,30 @@ p, li {
 		}
 	}
 
+	.pricing-container {
+		background-color: rgb(99, 45, 81);
+		padding-bottom: 30px;
+	}
+
 	.pricing {
 		padding: 0 20px;
 		.model {
 			@include span-columns(6 of 12);
 			&:nth-child(2n) { @include omega;}
-			// @include shift(1);
-			// @include omega;
 			margin-top: 60px;
+			height: auto;
 
 			&:hover {
+				height: auto;
 				margin-top: 60px;
+				.contact {
+					margin-top: 15px;
+				}
 			}
 
-			.learn-more {
-				display: none;
+			.details.open {
+				height: auto;
+				@include transition(height 0.2s ease-in-out);
 			}
 		}
 	}
@@ -663,10 +679,6 @@ p, li {
 			&:nth-child(2n) { @include omega;}
 			@include shift(1);
 			@include omega;
-			margin-top: 60px;
-			&:hover {
-				margin-top: 60px;
-			}
 		}
 	}
 
@@ -738,19 +750,6 @@ p, li {
 			a {
 				margin-right: 15px;
 			}
-		}
-	}
-
-	.offer {
-		padding: 30px 10px;
-
-		.a {
-			display: none;
-		}
-
-		.b {
-			@include span-columns(12 of 12);
-			text-align: center;
 		}
 	}
 }
