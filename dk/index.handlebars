@@ -1,153 +1,264 @@
 {{> header }}
 
 <div class="header-container cont">
-	<div class="header int">
-		<a hf="/" title="Spilhuset" class="logo">
+	<div class="video-overlay" id="video-overlay"></div>
+	<iframe id="spilhuset" src="https://player.vimeo.com/video/131718559?api=1&player_id=spilhuset&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+	<div class="header int" id="header" data-animation-state="in">
+		<a href="" class="logo">
 			{{{img "spilhuset.png"}}}
 		</a>
+		<h1 class="title">Workspace &amp; Community</h1>
+		<a href="#" class="play">Hvad er Spilhuset?</a>
 	</div>
-</div>
 
-<div class="content-container cont">
-	<div class="content int">
-		<p class="center">
-			<a class="lang" href="/">Spilhuset in English</a>
-		</p>
-
-		<div class="asection section">
-			<p>Spilhuset er et magisk sted i hjertet af København. Historisk set er Spilhuset hjemmet for nogle af nationens bedste spiludviklere. Spilhuset er det perfekte miljø for spil og teknologi startups at mødes, tænke og bygge. Siden midten af 2000'erne har dygtige og ambitiøse virksomheder bidraget til fælleskabets kultur, og gjort det til Danmarks største samling af spilvirksomheder.</p>
-
-		</div>
-		
-		<div class="bsection section">
-			<p>Med fælleskabets ånd åbner vi et 620 m<sup>2</sup> coworking space i 2015. Dette nye coworking space tilbyder det perfekte kompromis imellem en intim arbejdsplads og det tekniske fællesskab. Vi tilbyder alt fra skriveborde, private kontore, mødelokaler og fællesarealer.</p>
-		</div>
-
-		<div class="csection section">
-			<h3>Hvad vi kan tilbyde</h3>
-
-			<p>Som et firma i Spilhuset får du adgang til et fuldt møbleret kontor miljø i skønne omgivelser og internet adgang med høj hastighed. Alle firmaer har adgang til et stort mødelokale på 2. sal, et lille mødelokale på 1. sal og spisesalen med plads til 40 mennesker. Vi tilbyder også betalt frokost ordning.</p>
-
-			<h3>Priserne</h3>
-
-			<ul>
-				<li>Skrivebord i lukket miljø: from 2700 kr.</li>
-				<li>Virtuelt kontor miljø: 800 kr.</li>
-			</ul>
-
-			<h3>Kontormiljøet</h3>
-
-			<p class="center">Billeder fra efter renoveringen af 1. sal.</p>
-
-			<div class="gallery">
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0835.jpg">{{{img "t_5A3A0835.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0850.jpg">{{{img "t_5A3A0850.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0860.jpg">{{{img "t_5A3A0860.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0867.jpg">{{{img "t_5A3A0867.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0871.jpg">{{{img "t_5A3A0871.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0881.jpg">{{{img "t_5A3A0881.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0887.jpg">{{{img "t_5A3A0887.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0900.jpg">{{{img "t_5A3A0900.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0906.jpg">{{{img "t_5A3A0906.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0918.jpg">{{{img "t_5A3A0918.jpg" false }}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A0921.jpg">{{{img "t_5A3A0921.jpg" false }}}</a></div>
+	<nav class="navigation">
+		<div class="navigation-inner">
+			<div class="left">
+				<a href="#header" id="nav-home" class="logo scrollbased" title="Go to the top of the page">
+					{{{img "logo-header.png"}}}
+				</a>
 			</div>
 
-			<p class="center">Billeder fra de delte faciliteter og Robocat's kontor på 2. sal.</p>
-			
-
-			<div class="gallery">
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8191.jpg">{{{img "t_5A3A8191.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8227.jpg">{{{img "t_5A3A8227.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8235.jpg">{{{img "t_5A3A8235.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8243.jpg">{{{img "t_5A3A8243.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8271.jpg">{{{img "t_5A3A8271.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8285.jpg">{{{img "t_5A3A8285.jpg" false}}}</a></div>
-				<div class="photo"><a data-lightbox="floor" target="_blank" href="/images/5A3A8295.jpg">{{{img "t_5A3A8295.jpg" false}}}</a></div>
-			</div>>
+			<div class="right">
+				<a href="/" id="nav-lang" class="lang english" title="Spilhuset in Danish">English</a>
+				<a href="#tiers" id="nav-join" class="join scrollbased" title="Get in touch with us">Flyt ind</a>
+				<div class="social">
+					<a href="//twitter.com/spilhuset" id="share-tw" class="twitter" target="_blank">
+					{{{ img "header-twitter.png" }}}
+					</a>
+					<a href="//facebook.com/spilhuset" id="share-fb" class="facebook" target="_blank">
+						{{{ img "header-facebook.png" }}}
+					</a>
+				</div>
+			</div>
 		</div>
-	</div>
+	</nav>
 </div>
 
-<div class="contact-container cont">
-	<div class="contact int">
-		<a href="https://www.facebook.com/spilhuset">Spilhuset på Facebook</a>
-	</div>
+<div class="place-container cont">
+	<section class="place int">
+		<h2 class="title">Det bedste sted <br>at bygge ting <br>i København</h2>
+
+		<div class="column a">
+			<p>Spilhuset er et magisk sted placeret i hjertet af Køvenhavn. Som historisk hjem for nogle af nationens bedste spiludviklere, er Spilhuset det perfekte miljø for spil og teknologi startups at mødes, arbejde, bygge og fejre. Siden midten af 2000'erne har taltenfulde og ambitiøse startups bidraget til vores fælleskabs kultur og gjort det til Danmarks største samling af spilvirksomheder.</p>
+		</div>
+
+		<div class="column b">
+			<p>Med fælleskabets ånd åbner vi et hyggeligt 620m<sup>2</sup> lejlighedsstil kontormiljø. Dette nye sted tilbyder det perfekte kompromis imellem initimt arbejdsmiljø og teknologi fælleskab. Fra private skrivebord (skrivebord eller rum) til konference lokaler og fælles arealer har vi alt som er nødvendigt for at startups kan blive til en success.</p>
+		</div>
+	</section>
 </div>
 
-<div class="contact-container cont">
-	<div class="contact int">
-		<a href="mailto:hello@spilhuset.com?subject=Let's%20Talk">Kontakt os</a>
-	</div>
+<div class="map-container cont">
+	<iframe id="gmap" style="pointer-events: none;" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Spilhuset%2C%20Pilestr%C3%A6de%2C%20Copenhagen%2C%20Denmark&key=AIzaSyC-DKpAaRCss8IXyz1C0HtmQ18D9emuoD4"></iframe>
+</div>
+
+<div class="offer-container cont">
+	<section class="offer int">
+		<div class="column a">
+			<h2 class="title">&nbsp;</h2>
+			<div 
+				class="slider"
+				data-current-slide="0" 
+				data-slide-width="495" 
+				data-slide-height="340">
+				<div class="images">
+					<a href="/images/slider-1-full.jpg" data-lightbox="slides">{{{img "slider-1.jpg"}}}</a>
+					<a href="/images/slider-2-full.jpg" data-lightbox="slides">{{{img "slider-2.jpg"}}}</a>
+					<a href="/images/slider-3-full.jpg" data-lightbox="slides">{{{img "slider-3.jpg"}}}</a>
+					<a href="/images/slider-4-full.jpg" data-lightbox="slides">{{{img "slider-4.jpg"}}}</a>
+					<a href="/images/slider-5-full.jpg" data-lightbox="slides">{{{img "slider-5.jpg"}}}</a>
+					<a href="/images/slider-6-full.jpg" data-lightbox="slides">{{{img "slider-6.jpg"}}}</a>
+				</div>
+				<div class="indicator">
+					<a href="#" class="bubble active"></a>
+					<a href="#" class="bubble"></a>
+					<a href="#" class="bubble"></a>
+					<a href="#" class="bubble"></a>
+					<a href="#" class="bubble"></a>
+					<a href="#" class="bubble"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="column b">
+			<h2 class="title">Hvad vi tilbyder</h2>
+			<p>Som firma eller individuel i Spilhuset får du adgang til et fuldt møbleret kontormiljø i skønne omgivelser. Højdejusterbare skriveborde og gode kontorstole. Højhastigheds internetadgang, reglmæsigt rengjorte områder og valgfri frokostordning. Alle har adgang til både små og store mødelokaler, vores store spisesal og flere hyggelige hjørner til samarbejde eller afslapning. Med andre ord er det, det perfekte sted at arbejde på dit drømme projekt.</p>
+			<a href="#" class="scrollandplay">Se beboerne snakke om Spilhuset</a>
+		</div>
+	</section>
+</div>
+
+<div class="pricing-container cont">
+	<section class="pricing int" id="tiers">
+		<div class="model flexible">
+			<div class="icon">
+				{{{img "desk-flexible.png"}}}
+			</div>
+			<h3 class="name">Flexplads</h3>
+			<p class="short">En flexplads i åbent kontormiljø</p>
+			<hr>
+
+			<p class="price">999 DKK<span>/mdr</span></p>
+			<p class="starting">Startpris</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Flexplads%20i%20Spilhuset" title="Tag kontakt til Spilhuset">Snak med os</a>
+
+			<a class="learn-more" href="#">Lær mere</a>
+		</div>
+
+		<div class="model fulltime">
+			<div class="icon">
+				{{{img "desk-fulltime.png"}}}
+			</div>
+
+			<h3 class="name">Fastplads</h3>
+			<p class="short">Dit eget skrivebord</p>
+			<hr>
+
+			<p class="price">2.600 DKK<span>/mdr</span></p>
+			<p class="starting">Startpris</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Fastplads%20i%20Spilhuset" title="Tag kontakt til Spilhuset">Snak med os</a>
+
+			<a class="learn-more" href="#">Lær mere</a>
+		</div>
+
+		<div class="model office">
+			<div class="icon">
+				{{{img "desk-office.png"}}}
+			</div>
+			<h3 class="name">Eget kontor</h3>
+			<p class="short">Et private kontor</p>
+			<hr>
+
+			<p class="price">Variabel</p>
+			<p class="starting">&nbsp;</p>
+
+			<a class="contact" href="mailto:hello@spilhuset.com?subject=Eget%20Kontor%20i%20Spilhuset" title="Tag kontakt til Spilhuset">Snak med os</a>
+
+			<a class="learn-more" href="#">Lær mere</a>
+		</div>
+	</section>
+</div>
+
+<div class="descriptions-containainer cont">
+	<section class="descriptions int">
+		<div class="model flexible">
+			<h3 class="type">For folk på farten</h3>
+
+			<p class="long">
+				Flexplads er til dig, der ønsker en lækker kontorplads et par dage om ugen og som ikke behøver en fast kontorplads.  Du behøver ikke at tænke på alt det praktiske, for vi sørger internet, rengøring, alarmsystem, printer, the- køkken, fuld udstyret køkken, mødelokale samt postadresse.
+				<br><br>
+				Vores inventar er helt nyt indeholdende kontorstol og elektriske hæve-sænkeborde.
+				<br><br>
+				Der er er mulighed for at tilmelde sig vores frokostordning imod et ekstra gebyr.
+				<br><br>
+				Der er <strong>ingen</strong> binding eller <strong>opsigelsesperiode</strong> på en Flexplads.
+				<br><br>
+				Etableringsudgift: 399,-
+				<br>
+				Depositum: 999,-
+				<br><br>
+				Adgang 24/7
+				<br><br>
+				Alle priser er eksklusiv moms
+			</p>
+		</div>
+
+		<div class="model fulltime">
+			<h3 class="type">Dit nye hjem</h3>
+
+			<p class="long">
+			En fastplads i Spilhuset er til dig, der er dagligt er på kontoret og har brug for dit eget skrivebord.
+			<br><br>
+			Du behøver ikke at tænke på alt det praktiske, for vi sørger internet, rengøring, alarmsystem, printer, the-køkken, samt fuld udstyret køkken. Du har adgang til flere mødelokaler, en fed lobby, en stor spisesal til events samt postadresse.
+			<br><br>
+			Vores inventar er helt nyt indeholdende kontorstol og elektriske hæve-sænkeborde.
+			<br><br>
+			Der er mulighed for at tilmelde sig vores frokostordning imod et ekstra gebyr.
+			<br><br>
+			Der er også mulighed for at sidde sammen med andre i et aflåst kontor med egen nøgle for en merpris af 299,- pr. måned
+			<br><br>
+			Adgang 24/7
+			<br><br>
+			Depositum: 3 månerds leje
+			<br><br>
+			Alle priser er eksklusiv moms.
+			</p>
+		</div>
+
+		<div class="model office">
+			<h3 class="type">Din nye base</h3>
+
+			<p class="long">
+				Vi tilbyder personlige aflukkede kontorer med egen nøgle.
+				Her kan dit team arbejde i trygge rammer, imens vi sørger for alt det praktiske.
+				<br><br>
+				Det eneste I skal tænke på er at gøre det I er bedst til.
+				<br><br>
+				Dit team har adgang til the-køkken, fuld udstyret køkken, flere mødelokaler, en fed lobby, en stor spisesal til events samt 
+				postadresse.
+				<br><br>
+				Vores inventar er helt nyt indeholdende kontorstol og elektriske hæve-sænkeborde.
+				<br><br>
+				Der er mulighed for at tilmelde sig vores frokostordning imod et ekstra gebyr.
+				<br><br>
+				Adgang 24/7
+				<br><br>
+				Kontakt os for en skræddersyet løsning.
+				<br><br>
+				Alle priser er eksklusiv moms
+			</p>
+		</div>
+	</section>
 </div>
 
 <div class="companies-container cont">
-	<div class="companies int">
-
-		<div class="row">
-			<div class="section asection">
-			<a href="http://www.knapnokgames.com/" target="_blank">
-				{{{img "knapnok.png"}}}
-			</a>
-			</div>
-
-			<div class="section bsection">
-				<a href="http://robo.cat" target="_blank">
-					{{{img "robocat.png"}}}
+	<section class="companies int">
+		{{#each companies}}
+			<div class="company">
+				<a target="_blank" href="{{this.href}}" title="Website for {{this.name}}" style="padding-top: {{this.ptop}}">
+					{{{img this.logo}}}
 				</a>
 			</div>
+		{{/each}}
 
-			<div class="section csection">
-				<a href="http://portaplay.dk/" target="_blank">
-					{{{img "portaplay.png"}}}
-				</a>
-			</div>
+		<div class="contact">
+			<a href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">Dig?</a>
 		</div>
-
-		<div class="row">
-			<div class="section asection">
-				<a href="http://www.iconfinder.com" target="_blank">
-					{{{img "iconfinder.png"}}}
-				</a>
-			</div>
-
-			<div class="section bsection">
-				<a href="http://www.lohika-games.com/" target="_blank">
-					{{{img "lohika.png"}}}
-				</a>
-			</div>
-
-			<div class="section csection">
-				<a href="http://pressplay.dk/" target="_blank">
-					{{{img "pressplay.png"}}}
-				</a>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="section asection">
-				<a href="http://duckandcovergames.com/" target="_blank">
-					{{{img "duckandcover.png" false}}}
-				</a>
-			</div>
-			
-		</div>
-	</div>
+	</section>	
 </div>
 
-<div class="footer-container cont">
+<div class="footer-container cont" id="footer">
 	<div class="footer int">
-		<a href="http://robo.cat" class="robocat-iphone" target="_blank">
-			{{{img "cat.png"}}}
-		</a>
-		<p>
-			Bestyret af <a href="http://robo.cat" target="_blank">Robocat</a>
-			<span class="space"></span>
-			<a href="http://robo.cat" class="robocat">{{{img "cat.png"}}}</a>
-			<span class="space"></span>
-			<br>
-			<a href="http://maps.google.com?q=Spilhuset" target="_blank">Pilestræde 43, Copenhagen</a>
-		</p>
+		<div class="location">
+			<a class="map" href="https://www.google.dk/maps/place/Pilestr%C3%A6de+43,+1112+K%C3%B8benhavn+K/@55.6811462,12.579215,17z/data=!3m1!4b1!4m2!3m1!1s0x46525310a82927d1:0xa3f8d542574de862?hl=en">
+				{{{img "location.png"}}}
+			</a>
+			<div class="physical">
+				<p class="company">Spilhuset</p>
+				<p class="address">
+					Pilestræde 43, 1. sal<br>
+					1112 København<br>
+					Denmark
+				</p>
+			</div>
+		</div>
+		<div class="getintouch">
+			<a href="//twitter.com/spilhuset/"
+				class="button twitter"
+				onClick="sendEvent('button', 'clicked', 'social-twitter');">@spilhuset</a>
+
+			<a href="//facebook.com/spilhuset/"
+			class="button facebook"
+			onClick="sendEvent('button', 'clicked', 'social-facebook');">/spilhuset</a>
+
+			<a href="mailto:hello@spilhuset.com"
+				class="button email"
+				onClick="sendEvent('button', 'clicked', 'social-email');">hello@spilhuset.com</a>
+		</div>
 	</div>
 </div>
 

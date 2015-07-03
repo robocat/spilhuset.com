@@ -93,7 +93,7 @@ hideVideo = (id) ->
 
 player.addEvent 'ready', ->
 	player.addEvent 'pause', hideVideo
-	player.addEvent 'finished', hideVideo
+	player.addEvent 'finish', hideVideo
 
 toggleDescription = (box) ->
 	$ele = $('.descriptions .model.' + box)
@@ -137,7 +137,7 @@ menuItems.click (e) ->
 	scrollTo offsetTop
 
 scrollTo = (offset, cb = null) ->
-	s = "html body"
+	s = "html, body"
 	s = "html" if Modernizr.firefox
 	$(s).stop().animate {scrollTop: offset}, "slow", "swing", cb
 
@@ -157,8 +157,8 @@ $(document).ready ->
 			type: 'video/webm', src: '/header_movie.webm', {ambient: true, doLoop: true}
 		]
 
-	bv.getPlayer().on 'loadedmetadata', () ->
-		headerContainer.css 'opacity', 1
+		bv.getPlayer().on 'loadedmetadata', () ->
+			headerContainer.css 'opacity', 1
 
 	$(".play").click (e) ->
 		e.preventDefault()
