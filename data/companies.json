@@ -52,5 +52,11 @@
 		"href": "http://duckandcovergames.com/",
 		"logo": "company-duckandcover.png",
 		"ptop": "0px"
+	},
+	{
+		"name": "Apex",
+		"href": "http://www.apex.dk/",
+		"logo": "company-apex.png",
+		"ptop": "0"
 	}
 ]
