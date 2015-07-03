@@ -141,6 +141,11 @@ scrollTo = (offset, cb = null) ->
 	s = "html" if Modernizr.firefox
 	$(s).stop().animate {scrollTop: offset}, "slow", "swing", cb
 
+navigateToExternal = (url) ->
+	window.open url, '_blank'
+
+videoLink = "http://vimeo.com/131718559"
+
 $(window).scroll -> 
 	stickyMenu()
 
@@ -162,12 +167,19 @@ $(document).ready ->
 
 	$(".play").click (e) ->
 		e.preventDefault()
-		showVideo()
+		if Modernizr.touch
+			navigateToExternal videoLink
+		else
+			showVideo()
 
 	$('.scrollandplay').click (e) ->
 		e.preventDefault()
-		scrollTo 0, ->
-			showVideo()
+
+		if Modernizr.touch
+			navigateToExternal videoLink
+		else
+			scrollTo 0, ->
+				showVideo()
 
 
 	$('.pricing .model .learn-more').click (e) ->
