@@ -617,6 +617,11 @@ p, li {
 @include media(max-width 1000px) {
 	.place {
 		padding: 30px 20px;
+
+		.column {
+			@include span-columns(12 of 12);
+			text-align: center;
+		}
 	}
 
 	.offer {
@@ -729,6 +734,7 @@ p, li {
 	.header-container {
 		height: auto;
 	}
+
 	.header {
 		padding: 30px 10px;
 
@@ -751,6 +757,10 @@ p, li {
 				margin-right: 15px;
 			}
 		}
+	}
+
+	.slider {
+		display: none;
 	}
 }
 
