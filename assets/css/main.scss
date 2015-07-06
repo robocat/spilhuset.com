@@ -492,6 +492,28 @@ p, li {
 	}
 }
 
+.call {
+	padding-top: 80px;
+
+	.column {
+		@include span-columns(6 of 12);
+		&:nth-child { @include omega; }
+		text-align: center;
+	}
+
+	h3 {
+		color: #c2c2c2;
+		font-size: 14pt;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	a {
+		font-size: 22pt;
+		font-weight: bold;
+	}
+}
+
 .companies {
 	padding: 200px 0 150px 0;
 
@@ -687,7 +709,22 @@ p, li {
 		}
 	}
 
+	.call {
+		padding-top: 30px;
+
+		.column {
+			@include span-columns(12 of 12);
+			@include omega;
+
+			h3 {
+				margin-top: 30px;
+			}
+		}
+	}
+
 	.companies {
+		padding-top: 60px;
+
 		.company {
 			@include span-columns(12 of 12);
 			// &:nth-child(n+1) { @include omega; }
