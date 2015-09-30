@@ -57,6 +57,18 @@
 		"name": "Apex",
 		"href": "http://www.apex.dk/",
 		"logo": "company-apex.png",
-		"ptop": "0"
+		"ptop": "18px"
+	},
+	{
+		"name": "Nifflas",
+		"href": "http://nifflas.ni2.se/",
+		"logo": "company-nifflas.png",
+		"ptop": "18px"
+	},
+	{
+		"name": "Die Gute Fabrik",
+		"href": "http://gutefabrik.com/",
+		"logo": "company-dieguten.png",
+		"ptop": "0px"
 	}
 ]
