@@ -1,16 +1,14 @@
 // Returns path for image-url
 $image-path: '/images/' !default;
 
-@if not function-exists(image-url) {
-  @function image-url($filename) {
-    @return url('#{$image-path}#{$filename}');
-  }
+@function image-url($filename) {
+  @return url('#{$image-path}#{$filename}');
 }
 
 @mixin retina-hover($name, $size, $type: "png", $hover-suffix: "-hover", $retina-suffix: "_2x") {
 	$hover: $name + $hover-suffix;
 
-	@include retina-image($name, $size); 
+	@include retina-image($name, $size);
 
 	&:hover { @include retina-image($hover, $size); }
 	&:after {
