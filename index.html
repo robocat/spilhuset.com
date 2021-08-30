@@ -1,4 +1,32 @@
-{{> header }}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="{{ template.description }}">
+        <meta name="keywords" content="{{ template.keywords }}">
+        <title>Spilhuset</title>
+
+        <meta name="og:title" content="{{ site.title }}" />
+        <meta name="og:site_name" content="{{ site.fb.appName }}" />
+        <meta name="og:app_id" content="{{ site.fb.appId }}" />
+        <meta name="og:url" content="{{ site.url }}" />
+        <meta name="og:description" content="{{ site.description }}" />
+        <meta name="og:image" content="/images/shareimage.jpg" />
+        <meta name="og:locale" content="{{#if template.lang}}{{template.lang}}{{/if}}" />
+        <meta name="og:type" content="website" />
+    	
+        <link rel='stylesheet' href='/assets/css/main.css'>
+    
+        <link rel="image_src" href="/assets/images/shareimage.jpg" /> 
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" />
+    </head>
+    <body>
+        <div class="container">
 
 <div class="header-container cont">
 	<div class="video-overlay" id="video-overlay"></div>
@@ -6,7 +34,7 @@
 
 	<div class="header int" id="header" data-animation-state="in">
 		<a href="" class="logo">
-			{{{img "spilhuset.png"}}}
+			<img srcset="/assets/images/spilhuset.png 1x,/assets/images/spilhuset_2x.png 2x" />
 		</a>
 		<h1 class="title">Workspace &amp; Community</h1>
 		<a href="#" class="play">What is Spilhuset?</a>
@@ -16,7 +44,7 @@
 		<div class="navigation-inner">
 			<div class="left">
 				<a href="#header" id="nav-home" class="logo scrollbased" title="Go to the top of the page">
-					{{{img "logo-header.png"}}}
+					<img srcset="/assets/images/logo-header.png 1x,/assets/images/logo-header_2x.png 2x" />
 				</a>
 			</div>
 
@@ -25,10 +53,10 @@
 				<a href="#tiers" id="nav-join" class="join scrollbased" title="Get in touch with us">Join our space</a>
 				<div class="social">
 					<a href="//twitter.com/spilhuset" id="share-tw" class="twitter" target="_blank">
-					{{{ img "header-twitter.png" }}}
+						<img srcset="/assets/images/header-twitter.png 1x, /assets/images/header-twitter_2x.png 2x" />
 					</a>
 					<a href="//facebook.com/spilhuset" id="share-fb" class="facebook" target="_blank">
-						{{{ img "header-facebook.png" }}}
+						<img srcset="/assets/images/header-facebook.png 1x, /assets/images/header-facebook_2x.png 2x" />
 					</a>
 				</div>
 			</div>
@@ -64,12 +92,12 @@
 				data-slide-width="495" 
 				data-slide-height="340">
 				<div class="images">
-					<a href="/images/slider-1-full.jpg" data-lightbox="slides">{{{img "slider-1.jpg"}}}</a>
-					<a href="/images/slider-2-full.jpg" data-lightbox="slides">{{{img "slider-2.jpg"}}}</a>
-					<a href="/images/slider-3-full.jpg" data-lightbox="slides">{{{img "slider-3.jpg"}}}</a>
-					<a href="/images/slider-4-full.jpg" data-lightbox="slides">{{{img "slider-4.jpg"}}}</a>
-					<a href="/images/slider-5-full.jpg" data-lightbox="slides">{{{img "slider-5.jpg"}}}</a>
-					<a href="/images/slider-6-full.jpg" data-lightbox="slides">{{{img "slider-6.jpg"}}}</a>
+					<a href="/assets/images/slider-1-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-1.jpg 1x, /assets/images/slider-1_2x.jpg 2x" /></a>
+					<a href="/assets/images/slider-2-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-2.jpg 1x, /assets/images/slider-2_2x.jpg 2x" /></a>
+					<a href="/assets/images/slider-3-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-3.jpg 1x, /assets/images/slider-3_2x.jpg 2x" /></a>
+					<a href="/assets/images/slider-4-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-4.jpg 1x, /assets/images/slider-4_2x.jpg 2x" /></a>
+					<a href="/assets/images/slider-5-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-5.jpg 1x, /assets/images/slider-5_2x.jpg 2x" /></a>
+					<a href="/assets/images/slider-6-full.jpg" data-lightbox="slides"><img srcset="/assets/images/slider-6.jpg 1x, /assets/images/slider-6_2x.jpg 2x" /></a>
 				</div>
 				<div class="indicator">
 					<a href="#" class="bubble active"></a>
@@ -94,7 +122,7 @@
 	<section class="pricing int" id="tiers">
 		<div class="model flexible">
 			<div class="icon">
-				{{{img "desk-flexible.png"}}}
+				<img srcset="/assets/images/desk-flexible.png 1x, /assets/images/desk-flexible_2x.png 2x" />
 			</div>
 			<h3 class="name">Flexible</h3>
 			<p class="short">Common rooms and flexible desks</p>
@@ -129,7 +157,7 @@
 
 		<div class="model fulltime">
 			<div class="icon">
-				{{{img "desk-fulltime.png"}}}
+				<img srcset="/assets/images/desk-fulltime.png 1x, /assets/images/desk-fulltime_2x.png 2x" />
 			</div>
 
 			<h3 class="name">Full-Time</h3>
@@ -166,7 +194,7 @@
 
 		<div class="model office">
 			<div class="icon">
-				{{{img "desk-office.png"}}}
+				<img srcset="/assets/images/desk-office.png 1x, /assets/images/desk-office_2x.png 2x" />
 			</div>
 			<h3 class="name">Private Office</h3>
 			<p class="short">A private office</p>
@@ -279,13 +307,61 @@
 
 <div class="companies-container cont">
 	<section class="companies int">
-		{{#each companies}}
 			<div class="company">
-				<a target="_blank" href="{{this.href}}" title="Website for {{this.name}}" style="padding-top: {{this.ptop}}">
-					{{{img this.logo}}}
+				<a target="_blank" href="http://knapnokgames.com" title="Website for KnapNok Games" style="padding-top: 25px">
+					<img srcset="/assets/images/company-knapnokgames.png 1x, /assets/images/company-knapnokgames_2x.png 2x" />
 				</a>
 			</div>
-		{{/each}}
+			<div class="company">
+				<a target="_blank" href="http://robo.cat" title="Website for Robocat" style="padding-top: 15px">
+					<img srcset="/assets/images/company-robocat.png 1x, /assets/images/company-robocat_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://presplay.dk" title="Website for Press Play" style="padding-top: 0px">
+					<img srcset="/assets/images/company-pressplay.png 1x, /assets/images/company-pressplay_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://iconfinder.com" title="Website for Iconfinder" style="padding-top: 34px">
+					<img srcset="/assets/images/company-iconfinder.png 1x, /assets/images/company-iconfinder_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://lohika-games.com" title="Website for Lohika" style="padding-top: 0px">
+					<img srcset="/assets/images/company-lohika.png 1x, /assets/images/company-lohika_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://glitchnap.com" title="Website for Glitchnap" style="padding-top: 0px">
+					<img srcset="/assets/images/company-glitchnap.png 1x, /assets/images/company-glitchnap_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://portaplay.dk" title="Website for Portaplay" style="padding-top: 8px">
+					<img srcset="/assets/images/company-portaplay.png 1x, /assets/images/company-portaplay_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://duckandcovergames.com" title="Website for Duck & Cover" style="padding-top: 0px">
+					<img srcset="/assets/images/company-duckandcover.png 1x, /assets/images/company-duckandcover_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://apex.dk" title="Website for Apex" style="padding-top: 18px">
+					<img srcset="/assets/images/company-apex.png 1x, /assets/images/company-apex_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://nifflas.ni2.se" title="Website for Nifflas" style="padding-top: 18px">
+					<img srcset="/assets/images/company-nifflas.png 1x, /assets/images/company-nifflas_2x.png 2x" />
+				</a>
+			</div>
+			<div class="company">
+				<a target="_blank" href="http://gutefabrik.com" title="Website for Die Gute Fabrik" style="padding-top: 0px">
+					<img srcset="/assets/images/company-dieguten.png 1x, /assets/images/company-dieguten_2x.png 2x" />
+				</a>
+			</div>
 
 		<div class="contact">
 			<a href="mailto:hello@spilhuset.com" title="Get in touch with Spilhuset">You?</a>
@@ -297,7 +373,7 @@
 	<div class="footer int">
 		<div class="location">
 			<a class="map" href="https://www.google.dk/maps/place/Pilestr%C3%A6de+43,+1112+K%C3%B8benhavn+K/@55.6811462,12.579215,17z/data=!3m1!4b1!4m2!3m1!1s0x46525310a82927d1:0xa3f8d542574de862?hl=en">
-				{{{img "location.png"}}}
+				<img srcset="/assets/images/location.png 1x, /assets/images/location_2x.png 2x" />
 			</a>
 			<div class="physical">
 				<p class="company">Spilhuset</p>
@@ -324,4 +400,22 @@
 	</div>
 </div>
 
-{{> footer }}
+	</div>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-64831066-1', 'auto');
+	ga('send', 'pageview');
+
+	</script>
+	<!-- <script src="/js/vendor.js" type="text/javascript" charset="utf-8"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.15.4/video.min.js" integrity="sha512-dsg6qxwnVPFvhJhbRxyhW9gFvzytQ//4fCinJgKZQuoH6v6JYryP4OOjDGY7MfdVHjv1trJRDmJWdL2dNsbm6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/BigVideo.js/1.0.7/lib/bigvideo.min.js" integrity="sha512-HPPTQ80HxSLyKbi+aTfTT9T1sEcanys7QPkKvKn3kluKUa0eVPMkBzz4G+5osRHGJz1eL3zQJN/tGAKKpg+aDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/assets/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
